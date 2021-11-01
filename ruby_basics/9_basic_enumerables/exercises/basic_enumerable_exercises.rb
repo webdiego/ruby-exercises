@@ -1,10 +1,14 @@
 def display_current_inventory(inventory_list)
   # use #each to iterate through each item of the inventory_list (a hash)
-  # use puts to output each list item "<key>, quantity: <value>" to console
+  inventory_list.each do |item_key, item_value|
+    # use puts to output each list item "<key>, quantity: <value>" to console
+    puts "ITEM : #{item_key} , VALUE:  #{item_value}"
+  end
 end
 
 def display_guess_order(guesses)
   # use #each_with_index to iterate through each item of the guesses (an array)
+  guesses.each_with_index {|guess , index| puts "Guess #{index + 1 } is #{guess}" }
   # use puts to output each list item "Guess #<number> is <item>" to console
   # hint: the number should start with 1
 end
@@ -24,3 +28,5 @@ def find_word_lengths(word_list)
   # return a hash with each word as the key and its length as the value
   # hint: look at the documentation and review the reduce examples in basic enumerable lesson
 end
+display_current_inventory( { "bag" => 2 , "shoes" => 20 } ) 
+display_guess_order( ["diego" , "juanfran "] ) 
