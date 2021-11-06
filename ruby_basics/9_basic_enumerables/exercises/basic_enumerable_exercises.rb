@@ -15,18 +15,20 @@ end
 
 def find_absolute_values(numbers)
   # use #map to iterate through each item of the numbers (an array)
+  numbers.map { |number| puts (number).abs }
   # return an array of absolute values of each number
+  
 end
 
 def find_low_inventory(inventory_list)
   # use #select to iterate through each item of the inventory_list (a hash)
+  puts inventory_list.select { | items, value | value < 4 }
   # return a hash of items with values less than 4
+ 
 end
 
-def find_word_lengths(word_list)
-  # use #reduce to iterate through each item of the word_list (an array)
-  # return a hash with each word as the key and its length as the value
-  # hint: look at the documentation and review the reduce examples in basic enumerable lesson
-end
+
 display_current_inventory( { "bag" => 2 , "shoes" => 20 } ) 
 display_guess_order( ["diego" , "juanfran "] ) 
+find_absolute_values([0 , -1 , -3])
+find_low_inventory({ 'Sharon' => 2, 'Leo' => 10, 'Leila' => 3, 'Arun' => 22 })
